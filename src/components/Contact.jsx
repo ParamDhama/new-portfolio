@@ -108,10 +108,10 @@ const Contact = () => {
             <input type="email" placeholder="Your Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required />
             <textarea placeholder="Your Message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required></textarea>
             <button type="submit" className="bg-purple-600 text-white px-6 py-3 rounded-lg">Send</button>
+            {success && <p className="text-green-600 ">{success}</p>}
           </motion.form>
 
         </div>
-            {success && <p className="text-green-600 absolute top-20">{success}</p>}
       </div>
     </section>
   );
