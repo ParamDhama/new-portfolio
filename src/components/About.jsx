@@ -25,15 +25,6 @@ const About = () => {
             and authentication systems. Committed to delivering <span className="font-semibold">efficient, secure, and 
             user-centric applications.</span>
           </p>
-          <motion.a 
-            href="/resume.pdf" 
-            download 
-            className="mt-6 inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-500 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Download Resume
-          </motion.a>
         </motion.div>
 
         {/* Right - Skills Animation */}

@@ -6,6 +6,7 @@ Welcome to the portfolio of Param Dhama, a passionate full-stack developer with 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Screenshot](#screenshot)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
 - [Running the Application](#running-the-application)
@@ -23,6 +24,10 @@ You can view the live version of the portfolio at:
 
 ## Features
 - **Mobile-First Responsive Design**: Fully responsive, built using Tailwind CSS for mobile optimization.
+
+## Screenshots
+- ### **Home Section**
+![Home section](./public/person.png)
 
 ## Technologies Used
 - **Frontend**: 

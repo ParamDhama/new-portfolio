@@ -28,6 +28,7 @@ const Home = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaLinkedin /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaTwitter /></a>
           </div>
+          <a href="/Param Dhama Resume.pdf" download={"Param Dhama Resume.pdf"}>
           <motion.button 
             className="mt-6 px-6 py-3 bg-yellow-400 text-purple-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition-all"
             whileHover={{ scale: 1.05 }}
@@ -35,6 +36,7 @@ const Home = () => {
           >
             Download Resume
           </motion.button>
+          </a>
         </motion.main>
 
         {/* Right Image with Floating & Glow Effect */}

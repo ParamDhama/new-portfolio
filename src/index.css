@@ -10,3 +10,31 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4c1d95; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* Adds a border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d9a20f; /* Color of the thumb when hovered */
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #e6a100; /* Color of the thumb when active */
+}
