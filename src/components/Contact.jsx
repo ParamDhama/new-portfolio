@@ -10,12 +10,19 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
-      setSuccess("Message sent successfully!");
-      setForm({ name: "", email: "", message: "" });
+      await axios.post("https://admin-portfolio-cj8u.onrender.com/api/contact", form);
+        setSuccess("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          setSuccess(null)
+        }, 2000);
+
     // eslint-disable-next-line no-unused-vars
     } catch (err) {
       setSuccess("Failed to send message.");
+      setTimeout(() => {
+        setSuccess(null)
+      }, 2000);
     }
   };
 
@@ -101,10 +108,10 @@ const Contact = () => {
             <input type="email" placeholder="Your Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required />
             <textarea placeholder="Your Message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required></textarea>
             <button type="submit" className="bg-purple-600 text-white px-6 py-3 rounded-lg">Send</button>
-            {success && <p className="text-green-600">{success}</p>}
           </motion.form>
 
         </div>
+            {success && <p className="text-green-600 absolute top-20">{success}</p>}
       </div>
     </section>
   );
