@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section id="about" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 flex items-center">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between cursor-default">
         
         {/* Left - About Text Animation */}
         <motion.div 

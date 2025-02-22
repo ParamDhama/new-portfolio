@@ -7,6 +7,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Define variables for links
+  const navLinks = ["Home", "About", "Project", "Contact"];
+  const socialLinks = [
+    { href: "https://github.com/ParamDhama", icon: <FaGithub size={24} /> },
+    { href: "https://www.linkedin.com/in/paramdhama/", icon: <FaLinkedin size={24} /> },
+    { href: "https://x.com/dhama_param", icon: <FaTwitter size={24} /> }
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       // Detect scroll position
@@ -30,7 +38,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         
         {/* Logo */}
-        <h1 className={`text-3xl font-bold tracking-wide transition-all ${
+        <h1 className={`text-3xl font-bold tracking-wide transition-all cursor-default ${
           isScrolled ? "text-purple-600" : "text-white"
         }`}>
           Param Dhama
@@ -38,7 +46,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {["Home", "About", "Project", "Contact"].map((item, index) => (
+          {navLinks.map((item, index) => (
             <motion.a
               key={index}
               href={`#${item.toLowerCase()}`}
@@ -55,16 +63,11 @@ const Navbar = () => {
         <div className={`hidden md:flex space-x-4 transition-all ${
           isScrolled ? "text-purple-600" : "text-white"
         }`}>
-       
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} className="hover:text-yellow-400 transition-colors" />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} className="hover:text-yellow-400 transition-colors" />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size={24} className="hover:text-yellow-400 transition-colors" />
-          </a>
+          {socialLinks.map(({ href, icon }, index) => (
+            <a key={index} href={href} target="_blank" rel="noopener noreferrer">
+              {icon}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -87,7 +90,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-[4rem] left-0 w-full bg-white shadow-lg flex flex-col items-center py-6 space-y-4"
           >
-            {["Home", "About", "Projects", "Contact"].map((item, index) => (
+            {navLinks.map((item, index) => (
               <motion.a
                 key={index}
                 href={`#${item.toLowerCase()}`}
@@ -101,15 +104,11 @@ const Navbar = () => {
 
             {/* Social Media Icons (Mobile) */}
             <div className="flex space-x-4 mt-4 text-gray-800">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <FaGithub size={24} className="hover:text-purple-600" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin size={24} className="hover:text-purple-600" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter size={24} className="hover:text-purple-600" />
-              </a>
+              {socialLinks.map(({ href, icon }, index) => (
+                <a key={index} href={href} target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
+              ))}
             </div>
           </motion.nav>
         )}

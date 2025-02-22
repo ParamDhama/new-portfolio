@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <FaPhone className="text-purple-600 text-2xl" />
+              <FaPhone className="text-purple-600 text-2xl -scale-x-100" />
               <a href="tel:+917011403127" className="text-lg text-gray-700 hover:text-purple-600">
                 +91 7011403127
               </a>
@@ -71,18 +71,18 @@ const Contact = () => {
 
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-purple-600 text-2xl" />
-              <p className="text-lg text-gray-700">Ward 05, Khekra, Baghpat, 250101</p>
+              <p className="text-lg text-gray-700">Baghpat, Uttar Pradesh, India, 250101</p>
             </div>
 
             {/* Social Media Links */}
             <div className="flex space-x-4 mt-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
                 <FaGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
                 <FaLinkedin />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
                 <FaTwitter />
               </a>
             </div>

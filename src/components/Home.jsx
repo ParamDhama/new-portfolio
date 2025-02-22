@@ -15,18 +15,18 @@ const Home = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 cursor-default">
             Hi, I&apos;m <span className="text-yellow-400">Param Dhama</span>
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-lg md:text-xl leading-relaxed mb-6 cursor-default">
             A passionate <span className="font-semibold">Full-Stack Developer</span> who loves creating 
             meaningful solutions, writing clean code, and solving complex problems.
             Constantly learning new technologies and improving my skills. 🚀
           </p>
           <div className="flex justify-center lg:justify-start space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaGithub /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaLinkedin /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaTwitter /></a>
+            <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaLinkedin /></a>
+            <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaTwitter /></a>
           </div>
           <a href="/Param Dhama Resume.pdf" download={"Param Dhama Resume.pdf"}>
           <motion.button 

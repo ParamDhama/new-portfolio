@@ -48,7 +48,7 @@ const Project = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Here are some of my major projects showcasing my skills in **Full-Stack Development**.
+          Here are some of my major projects showcasing my skills in <span className="font-bold text-purple-600">Full-Stack Development</span>.
         </motion.p>
 
         {/* Projects Grid Animation */}
