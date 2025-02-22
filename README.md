@@ -26,8 +26,7 @@ You can view the live version of the portfolio at:
 - **Mobile-First Responsive Design**: Fully responsive, built using Tailwind CSS for mobile optimization.
 
 ## Screenshots
-- ### **Home Section**
-![Home section](./public/person.png)
+![Main Screenshot](./public/image.png)
 
 ## Technologies Used
 - **Frontend**: 
