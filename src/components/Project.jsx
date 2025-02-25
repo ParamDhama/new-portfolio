@@ -6,23 +6,23 @@ const projects = [
     title: "Real-Time Chat Application",
     description: "A real-time chat application built using MERN Stack and Socket.io for instant messaging. Features group chat, online status, and JWT authentication.",
     techStack: ["MERN", "Socket.io", "JWT", "Tailwind CSS"],
-    github: "https://github.com/your-github/chat-app",
-    live: "https://your-chat-app-demo.com",
   },
   {
     title: "Inventory Management System",
     description: "A system for tracking stock levels, managing orders, and automating alerts. Features a REST API and role-based access control.",
     techStack: ["Node.js", "MongoDB", "Express.js", "Chart.js"],
-    github: "https://github.com/your-github/inventory-app",
-    live: "https://your-inventory-demo.com",
   },
   {
     title: "Job Portal",
     description: "A job portal with role-based authentication, job postings, application tracking, and resume uploads using Multer.",
     techStack: ["MERN", "Multer", "Email Notifications"],
-    github: "https://github.com/your-github/job-portal",
-    live: "https://your-job-portal-demo.com",
   },
+  {
+    title: "Shortify",
+    description: "A modern and secure URL shortener built with React, Node.js, and MongoDB, featuring JWT authentication, link management, QR code generation, and a sleek, responsive UI.",
+    techStack: ["MERN", "Tailwindcss","Email Notification"],
+    github: "https://github.com/ParamDhama/shortify-frontend"
+  }
 ];
 
 const Project = () => {
@@ -85,12 +85,12 @@ const Project = () => {
 
               {/* Links */}
               <div className="mt-4 flex justify-between">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
+                {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
                   <FaGithub className="mr-2" /> GitHub
-                </a>
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
+                </a>}
+                {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
                   <FaExternalLinkAlt className="mr-2" /> Live Demo
-                </a>
+                </a>}
               </div>
             </motion.div>
           ))}
