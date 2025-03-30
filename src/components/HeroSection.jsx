@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import person from '/person.png';
 
-const Home = () => {
+const HeroSection = () => {
   return (
     <section id="home" className="flex flex-col justify-center min-h-screen bg-gradient-to-b from-purple-500 to-purple-800 text-white relative pt-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6 md:px-12">
@@ -52,7 +52,7 @@ const Home = () => {
             alt="Profile" 
             className="w-72 md:w-96 rounded-full shadow-lg"
             animate={{ y: [0, -10, 0] }} // Floating effect
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            transition={{  duration: 1, ease: "easeInOut" }}
             whileHover={{
               scale: 1.05, 
               rotate: 5,
@@ -65,4 +65,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HeroSection;

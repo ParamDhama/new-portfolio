@@ -83,13 +83,13 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <div className="flex space-x-4 mt-4">
-              <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
                 <FaLinkedin />
               </a>
-              <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-purple-600">
+              <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
                 <FaTwitter />
               </a>
             </div>

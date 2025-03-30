@@ -13,18 +13,18 @@ html, body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 5px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Background of the scrollbar track */
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #4c1d95; /* Color of the scrollbar thumb */
   border-radius: 10px;
-  border: 3px solid #f1f1f1; /* Adds a border around the thumb */
+  border: 1px solid #f1f1f1; /* Adds a border around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {

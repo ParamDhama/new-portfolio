@@ -1,19 +1,15 @@
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Project from "./components/Project";
+
+import Intro from "./components/Intro";
+import Home from "./pages/Home";
 
 function App() {
 
-
+  
   return (
-    <div >
-      <Navbar />
-      <Home />
-      <About />
-      <Project />
-      <Contact />
+    <div className="App">
+      <Intro/>
+      <div></div>
+      <Home/>
     </div>
   );
 }

@@ -31,18 +31,20 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full transition-all z-[9999] ${
+      className={`fixed top-0 left-0 w-full transition-all z-[1] ${
         isScrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         
         {/* Logo */}
-        <h1 className={`text-3xl font-bold tracking-wide transition-all cursor-default ${
+        <a
+        href="#home" 
+        className={`text-3xl font-bold tracking-wide transition-all cursor-default cursor-pointer ${
           isScrolled ? "text-purple-600" : "text-white"
         }`}>
           Param Dhama
-        </h1>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
