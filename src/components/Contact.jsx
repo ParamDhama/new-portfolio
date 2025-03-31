@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } 
 import { motion } from "framer-motion";
 import { toast } from 'react-toastify';
 
-// eslint-disable-next-line react/prop-types
+ 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
