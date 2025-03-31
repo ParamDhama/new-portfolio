@@ -4,18 +4,20 @@ import Project from '../components/Project'
 import Contact from '../components/Contact'
 import HeroSection from '../components/HeroSection'
 import AchievementSection from '../components/AchievementSection'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   return (
-    <div className='overflow-x-hidden'>      
+    <div className='overflow-x-hidden'>
         <Navbar />
         <HeroSection />
         <About />
         <Project />
-        <AchievementSection/>
+        <AchievementSection />
+        <Testimonials />
         <Contact />
     </div>
   )
 }
 
-export default Home
+export default Home;

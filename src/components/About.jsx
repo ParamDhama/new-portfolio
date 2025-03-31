@@ -21,9 +21,18 @@ const About = () => {
             Experienced in building scalable web applications, automation tools, and AI-powered solutions.
           </p>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            I have a strong background in <span className="font-semibold">backend development, API integrations,</span>  
-            and authentication systems. Committed to delivering <span className="font-semibold">efficient, secure, and 
-            user-centric applications.</span>
+            My journey into software development began with a deep curiosity about how applications work behind the scenes. 
+            Over the years, I have honed my skills in <span className="font-semibold">frontend and backend development</span>, 
+            constantly pushing myself to build more robust and efficient solutions.
+          </p>
+          <p className="text-lg text-gray-700 mt-4 leading-relaxed">
+            I take pride in my <span className="font-semibold">problem-solving abilities</span> and my dedication to writing clean, maintainable code. 
+            Whether it’s developing RESTful APIs or crafting modern, responsive user interfaces, I strive to deliver 
+            <span className="font-semibold"> high-quality software that enhances user experiences.</span>
+          </p>
+          <p className="text-lg text-gray-700 mt-4 leading-relaxed">
+            My goal is to become a proficient <span className="font-semibold">Software Engineer</span> and contribute to impactful projects that make a difference. 
+            I am always eager to learn new technologies and continuously improve my skills to stay ahead in the industry.
           </p>
         </motion.div>
 
@@ -38,19 +47,19 @@ const About = () => {
           {[{
             icon: <FaCode size={40} className="text-purple-600 mb-2" />,
             title: "Frontend",
-            description: "React.js, Tailwind CSS, JavaScript"
+            description: "React.js, Next.js, Tailwind CSS, JavaScript"
           }, {
             icon: <FaServer size={40} className="text-purple-600 mb-2" />,
             title: "Backend",
-            description: "Node.js, Express.js, JWT"
+            description: "Node.js, Express.js, ASP.NET Web API, JWT"
           }, {
             icon: <FaDatabase size={40} className="text-purple-600 mb-2" />,
             title: "Database",
-            description: "MongoDB, SQL"
+            description: "MongoDB, SQL, PostgreSQL"
           }, {
             icon: <FaTools size={40} className="text-purple-600 mb-2" />,
-            title: "Tools",
-            description: "Git, GitHub, REST APIs"
+            title: "Tools & Others",
+            description: "Git, GitHub, Docker, REST APIs, WebSockets"
           }].map((skill, index) => (
             <motion.div 
               key={index} 
