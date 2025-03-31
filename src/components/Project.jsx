@@ -42,6 +42,16 @@ const projects = [
     github: "https://github.com/ParamDhama/shortify-frontend",
   },
   {
+    title: "Job Portal",
+    description:
+      "A dynamic job portal with role-based authentication, job postings, and resume uploads.",
+    longDescription:
+      "The Job Portal project is an end-to-end platform connecting job seekers with employers. Built on the MERN stack, it features robust authentication mechanisms using JWT and role-based access control. The system allows employers to post job openings while applicants can submit their resumes via Multer for seamless file uploads. Integrated email notifications keep users updated on their application status. The intuitive interface, powered by Tailwind CSS, offers a smooth user experience across devices. By simplifying the job application process, this portal enhances employment opportunities and recruitment efficiency.",
+    techStack: ["MERN", "Multer", "Email Notifications"],
+    github: "https://github.com/ParamDhama/TechBridge",
+    live: "https://techbridgepage.netlify.app/"
+  },
+  {
     title: "StickyNotes",
     description:
       "A lightweight sticky notes application built with Electron.js and Node.js for Linux Ubuntu.",
@@ -49,6 +59,7 @@ const projects = [
       "StickyNotes is a productivity-enhancing application designed to provide a simple and effective way to manage tasks and reminders on Linux Ubuntu systems. Unlike Windows, Linux does not have a built-in sticky notes app by default. StickyNotes fills this gap by offering a compact and efficient tool that consumes minimal memory and screen space. Data is stored locally, ensuring quick access and offline functionality. With an intuitive interface, users can create, edit, and delete notes effortlessly. The application is optimized to boost productivity without sacrificing system performance.",
     techStack: ["Electron.js", "Node.js", "Linux"],
   },
+  
   {
     title: "Discord-Bot",
     description:
@@ -73,14 +84,7 @@ const projects = [
       "The Inventory Management System is a robust solution for efficiently managing stock, orders, and inventory alerts. Built with Node.js, Express.js, MongoDB, and Chart.js, it provides real-time data visualization and insightful analytics. The application features role-based access control to maintain data security and streamline operations. Users can track inventory levels, generate reports, and set threshold alerts to mitigate stock issues. Its RESTful API ensures seamless integration with other business systems. This project is designed to optimize inventory management processes for medium to large-scale enterprises, enhancing operational efficiency.",
     techStack: ["Node.js", "MongoDB", "Express.js", "Chart.js"],
   },
-  {
-    title: "Job Portal",
-    description:
-      "A dynamic job portal with role-based authentication, job postings, and resume uploads.",
-    longDescription:
-      "The Job Portal project is an end-to-end platform connecting job seekers with employers. Built on the MERN stack, it features robust authentication mechanisms using JWT and role-based access control. The system allows employers to post job openings while applicants can submit their resumes via Multer for seamless file uploads. Integrated email notifications keep users updated on their application status. The intuitive interface, powered by Tailwind CSS, offers a smooth user experience across devices. By simplifying the job application process, this portal enhances employment opportunities and recruitment efficiency.",
-    techStack: ["MERN", "Multer", "Email Notifications"],
-  },
+
 ];
 
 

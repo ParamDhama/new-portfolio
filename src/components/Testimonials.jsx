@@ -24,6 +24,7 @@ const testimonials = [
   },
 ];
 
+// eslint-disable-next-line react/prop-types
 const StarRating = ({ rating }) => {
   return (
     <div className="flex justify-center mb-2">

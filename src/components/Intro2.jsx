@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHtml5, FaJs, FaNode, FaPython, FaReact } from 'react-icons/fa';
 
@@ -114,7 +113,7 @@ const Intro2 = () => {
                                 exit={{ opacity: 0, scale: 0.1, x: '100%' }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <div className="border border-white border-4 rounded-xl p-6">
+                                <div className=" border-white border-4 rounded-xl p-6">
                                     <ActiveLogo />
                                 </div>
                                 

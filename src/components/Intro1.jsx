@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import person from '/person.png';
 import CanvasParticles from './CanvasParticles';
 
+// eslint-disable-next-line react/prop-types
 const Intro1 = ({ onEnd }) => {
     const [showIntro, setShowIntro] = useState(true);
 

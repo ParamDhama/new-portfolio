@@ -11,25 +11,24 @@ const Contact = () => {
     e.preventDefault();
     try {
       await axios.post("https://admin-portfolio-cj8u.onrender.com/api/contact", form);
-        setSuccess("Message sent successfully!");
-        setForm({ name: "", email: "", message: "" });
-        setTimeout(() => {
-          setSuccess(null)
-        }, 2000);
-
+      setSuccess("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => {
+        setSuccess(null);
+      }, 3000);
     // eslint-disable-next-line no-unused-vars
     } catch (err) {
-      setSuccess("Failed to send message.");
+      setSuccess("Failed to send message. Please try again later.");
       setTimeout(() => {
-        setSuccess(null)
-      }, 2000);
+        setSuccess(null);
+      }, 3000);
     }
   };
 
   return (
     <section id="contact" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
       <div className="max-w-6xl mx-auto text-center">
-        
+
         {/* Section Title */}
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"
@@ -48,7 +47,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Let&apos;s connect! Whether you have a question, a project idea, or just want to say hi, feel free to reach out.
+          Whether you have an idea to discuss, a project to collaborate on, or just want to say hello, feel free to reach out. We’d love to hear from you and explore potential opportunities together!
         </motion.p>
 
         {/* Contact Info & Form */}
@@ -82,33 +81,64 @@ const Contact = () => {
             </div>
 
             {/* Social Media Links */}
-            <div className="flex space-x-4 mt-4">
-              <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
-                <FaGithub />
-              </a>
-              <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
-                <FaLinkedin />
-              </a>
-              <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
-                <FaTwitter />
-              </a>
+            <div className="mt-6">
+              <div className="flex space-x-4">
+                <a href="https://github.com/ParamDhama" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
+                  <FaGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
+                  <FaLinkedin />
+                </a>
+                <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400">
+                  <FaTwitter />
+                </a>
+              </div>
             </div>
           </motion.div>
 
           {/* Right - Contact Form */}
           <motion.form 
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded-lg shadow-lg flex flex-col space-y-4"
+            className="bg-white p-8 rounded-lg shadow-lg flex flex-col space-y-4"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <input type="text" placeholder="Your Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required />
-            <input type="email" placeholder="Your Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required />
-            <textarea placeholder="Your Message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="p-3 border border-gray-300 rounded-lg" required></textarea>
-            <button type="submit" className="bg-purple-600 text-white px-6 py-3 rounded-lg">Send</button>
-            {success && <p className="text-green-600 ">{success}</p>}
+            <input 
+              type="text" 
+              placeholder="Your Name" 
+              value={form.name} 
+              onChange={(e) => setForm({ ...form, name: e.target.value })} 
+              className="p-4 border border-gray-300 rounded-lg" 
+              required 
+            />
+            <input 
+              type="email" 
+              placeholder="Your Email" 
+              value={form.email} 
+              onChange={(e) => setForm({ ...form, email: e.target.value })} 
+              className="p-4 border border-gray-300 rounded-lg" 
+              required 
+            />
+            <textarea 
+              placeholder="Your Message" 
+              value={form.message} 
+              onChange={(e) => setForm({ ...form, message: e.target.value })} 
+              className="p-4 border border-gray-300 rounded-lg min-h-[150px]" 
+              required 
+            ></textarea>
+            <button 
+              type="submit" 
+              className="bg-purple-600 text-white px-8 py-3 rounded-lg transition duration-300 hover:bg-purple-700"
+            >
+              Send
+            </button>
+            {success && (
+              <p className={`text-lg ${success.includes("successfully") ? "text-green-600" : "text-red-600"} mt-2`}>
+                {success}
+              </p>
+            )}
           </motion.form>
 
         </div>

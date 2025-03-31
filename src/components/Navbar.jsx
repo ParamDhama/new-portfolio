@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -40,7 +39,7 @@ const Navbar = () => {
         {/* Logo */}
         <a
         href="#home" 
-        className={`text-xl md:text-3xl font-bold tracking-wide transition-all cursor-default cursor-pointer ${
+        className={`text-xl md:text-3xl font-bold tracking-wide transition-all cursor-pointer ${
           isScrolled ? "text-purple-600" : "text-white"
         }`}>
           PD
