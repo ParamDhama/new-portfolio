@@ -14,6 +14,25 @@ const projects = [
     live: "https://paramdhama.netlify.app/",
   },
   {
+    title: "Street Surge Redesign",
+    description:
+      "A modern redesign of the Street Surge company website using React, Tailwind CSS, and Framer Motion.",
+    longDescription:
+      "The Street Surge Redesign project focuses on revamping the company website with a modern and visually appealing design. Built using React, Tailwind CSS, and Framer Motion, the website delivers smooth animations and a clean, responsive layout. The redesign enhances the overall user experience by improving navigation, aesthetics, and performance. Each section has been thoughtfully crafted to maintain a professional and dynamic feel, highlighting the brand's identity while leveraging cutting-edge frontend technologies.",
+    techStack: ["React", "Tailwindcss", "Framer-Motion", "JavaScript"],
+    github: "https://github.com/ParamDhama/streetsurge-redesign",
+    live: "https://fake-street-surge.netlify.app/",
+  },
+  {
+    title: "MetroNav",
+    description:
+      "An interactive metro navigation system to find the shortest path and fare between two stations.",
+    longDescription:
+      "MetroNav is an advanced metro navigation system built using Java and Java GUI. It efficiently calculates the shortest route between two metro stations, displaying the total travel time and fare charges. The system leverages Dijkstra's algorithm for optimal pathfinding and integrates data structures to manage station and route information. The interactive GUI makes it easy for users to select start and destination stations, view the metro map, and get instant results. MetroNav enhances user experience with a clear visual representation of routes and precise calculations.",
+    techStack: ["Java", "Java GUI", "DSA", "Dijkstra's Algorithm"],
+    github: "https://github.com/ParamDhama/metronav",
+  },
+  {
     title: "Shortify",
     description:
       "A modern and secure URL shortener built with React, Node.js, and MongoDB.",
@@ -38,6 +57,8 @@ const projects = [
       "The Real-Time Chat Application is a dynamic communication platform that supports group chats and individual messaging. Developed with the MERN stack and Socket.io, it features seamless live messaging with low latency. The application implements JWT-based authentication to ensure secure conversations. Online status indicators and user presence tracking enhance interactivity. Additionally, the chat UI is built with Tailwind CSS for a sleek and responsive design. The backend efficiently handles multiple connections while maintaining data integrity. This application is ideal for fostering real-time communication and collaboration among users.",
     techStack: ["MERN", "Socket.io", "JWT", "Tailwind CSS"],
   },
+
+
   {
     title: "Inventory Management System",
     description:
@@ -55,6 +76,7 @@ const projects = [
     techStack: ["MERN", "Multer", "Email Notifications"],
   },
 ];
+
 
 const Project = () => {
   const [showMore, setShowMore] = useState(false);
@@ -94,19 +116,19 @@ const Project = () => {
           {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 shadow-lg rounded-lg flex flex-col cursor-pointer"
+              className="bg-white p-6 shadow-lg rounded-lg flex flex-col justify-between cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
               onClick={() => openModal(project)}
             >
               <h3 className="text-xl font-semibold text-purple-600">{project.title}</h3>
-              <p className="text-gray-700 mt-2">{project.description}</p>
-               {/* Tech Stack Badges */}
-               <div className="mt-3 flex flex-wrap gap-2">
+              <p className="text-gray-700 text-justify mt-2">{project.description}</p>
+              {/* Tech Stack Badges */}
+              <div className="mt-3 flex flex-wrap gap-2">
                 {project.techStack.map((tech, idx) => (
-                  <motion.span 
-                    key={idx} 
+                  <motion.span
+                    key={idx}
                     className="px-3 py-1 bg-purple-200 text-purple-800 text-sm font-semibold rounded-md"
                     whileHover={{ scale: 1.1 }}
                   >
@@ -115,8 +137,8 @@ const Project = () => {
                 ))}
               </div>
 
-                            {/* Links */}
-                            <div className="mt-4 flex justify-between">
+              {/* Links */}
+              <div className="mt-4 flex justify-between">
                 {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
                   <FaGithub className="mr-2" /> GitHub
                 </a>}
@@ -164,7 +186,7 @@ const Project = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
               <h2 className="text-2xl font-semibold text-purple-600">{selectedProject.title}</h2>
-              <p className="text-gray-700 mt-2">{selectedProject.longDescription}</p>
+              <p className="text-gray-700 text-justify mt-2">{selectedProject.longDescription}</p>
 
               {/* Tech Stack Badges */}
               <div className="mt-3 flex flex-wrap gap-2">
