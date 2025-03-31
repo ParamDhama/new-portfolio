@@ -33,22 +33,22 @@ const AchievementSection = () => {
     const openModal = (cert) => setSelectedCert(cert);
 
     // Handle next certificate
-const nextAchivemnt = () => {
-    setSelectedCert((prev) => {
-        const currentIndex = achievementCertificates.findIndex((item) => item.id === prev.id);
-        const nextIndex = (currentIndex + 1) % achievementCertificates.length;
-        return achievementCertificates[nextIndex];
-    });
-};
+    const nextAchivemnt = () => {
+        setSelectedCert((prev) => {
+            const currentIndex = achievementCertificates.findIndex((item) => item.id === prev.id);
+            const nextIndex = (currentIndex + 1) % achievementCertificates.length;
+            return achievementCertificates[nextIndex];
+        });
+    };
 
-// Handle previous certificate
-const prevAchivemnt = () => {
-    setSelectedCert((prev) => {
-        const currentIndex = achievementCertificates.findIndex((item) => item.id === prev.id);
-        const prevIndex = (currentIndex - 1 + achievementCertificates.length) % achievementCertificates.length;
-        return achievementCertificates[prevIndex];
-    });
-};
+    // Handle previous certificate
+    const prevAchivemnt = () => {
+        setSelectedCert((prev) => {
+            const currentIndex = achievementCertificates.findIndex((item) => item.id === prev.id);
+            const prevIndex = (currentIndex - 1 + achievementCertificates.length) % achievementCertificates.length;
+            return achievementCertificates[prevIndex];
+        });
+    };
 
     // Handle closing the modal
     const closeModal = () => setSelectedCert(null);
@@ -115,32 +115,58 @@ const prevAchivemnt = () => {
 
                 {/* Modal for Certificate Image */}
                 {selectedCert && (
-                    <div className="fixed inset-0 bg-black/75 flex items-center justify-center z-50">
-                        <div className=" bg-white rounded-lg p-4">
-                            <button
-                                className="absolute top-2 right-2 text-white hover:text-purple-500 "
+                    <motion.div
+                        className="fixed inset-0 bg-black/75 flex items-center justify-center z-50"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 50 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                    >
+                        {/* Close Button */}
+                        <button
+                                className="absolute top-2 right-2 text-white hover:text-purple-500 z-[999]"
                                 onClick={closeModal}
                             >
                                 <FaTimes size={30} />
                             </button>
+
+                            {/* Next Button */}
                             <button
-                                className="absolute top-1/2 right-2 text-white hover:text-purple-500 "
+                                className="absolute top-1/2 right-2 text-white hover:text-purple-500 transform -translate-y-1/2"
                                 onClick={nextAchivemnt}
                             >
-                                <FaGreaterThan/>
+                                <FaGreaterThan size={30} />
                             </button>
+
+                            {/* Previous Button */}
                             <button
-                                className="absolute top-1/2 left-2 text-white hover:text-purple-500 "
+                                className="absolute top-1/2 left-2 text-white hover:text-purple-500 transform -translate-y-1/2"
                                 onClick={prevAchivemnt}
                             >
-                                <FaLessThan/>
+                                <FaLessThan size={30} />
                             </button>
-                            {/* <h3 className="text-2xl font-bold text-purple-600 mb-2">{selectedCert.title}</h3> */}
-                            <img
+
+                        <motion.div
+                            key={selectedCert.id}
+                            className="bg-white rounded-lg p-4 "
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                        >
+                            
+                            {/* Certificate Image */}
+                            <motion.img
                                 src={selectedCert.imageUrl}
                                 alt={selectedCert.title}
                                 className="w-full max-h-[80vh] object-contain rounded-4xl"
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.8, opacity: 0 }}
+                                transition={{ duration: 0.4, ease: "easeInOut" }}
                             />
+
+                            {/* Full Size Link */}
                             <a
                                 href={selectedCert.imageUrl}
                                 target="_blank"
@@ -150,9 +176,10 @@ const prevAchivemnt = () => {
                                 <FaExternalLinkAlt className="inline-block mr-2" />
                                 Open in Full Size
                             </a>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 )}
+
             </div>
         </section>
     );
