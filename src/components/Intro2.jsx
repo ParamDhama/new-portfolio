@@ -81,7 +81,7 @@ const Intro2 = () => {
         const logoTimer = setTimeout(() => {
 
             setLoad((prev) => prev < 100 ? (prev + 1) : 100);
-        }, 6000/120);
+        }, 6000 / 120);
         return () => clearTimeout(logoTimer);
     }, [load]);
 
@@ -100,7 +100,7 @@ const Intro2 = () => {
                     transition={{ duration: 1 }}
                     style={{ pointerEvents: 'all', touchAction: 'none' }}
                 >
-                    
+
                     <div
                         className="flex flex-col justify-center items-center h-2/3 text-9xl text-white font-bold "
                     >
@@ -116,8 +116,8 @@ const Intro2 = () => {
                                 <div className=" border-white border-4 rounded-xl p-6">
                                     <ActiveLogo />
                                 </div>
-                                
-                            <motion.h1
+
+                                <motion.h1
                                     key={`title-${index}`}
                                     className="text-center mt-10 text-2xl"
                                     initial={{ opacity: 0, scale: 0.1 }}
@@ -126,12 +126,12 @@ const Intro2 = () => {
                                     transition={{ duration: 0.3 }}
                                 >
                                     {ActiveTitle}
-                            </motion.h1>
+                                </motion.h1>
                             </motion.div>
                         </AnimatePresence>
 
                     </div>
-                    
+
                     <div className='absolute bottom-28 md:bottom-20 w-screen text-white text-2xl flex justify-center items-center'>
                         <div className='w-96 text-center'>
                             &quot;{developerQuotes[quoteIndex].quote}&quot; — {developerQuotes[quoteIndex].author}
@@ -140,8 +140,14 @@ const Intro2 = () => {
                     <div className='absolute bottom-15 md:bottom-20 right-5 md:right-20 text-white text-xl md:text-2xl '>
                         {load}%
                     </div>
-                    <div className='absolute bottom-10 left-2 h-2 bg-yellow-300 rounded-2xl' style={{ width: `${load - 2}vw` }}>
+                    <div className='absolute bottom-10 left-2 h-2 bg-yellow-300 rounded-2xl' style={{ width: `${load - 6}vw` }}>
 
+                    <div
+                        className="hidden md:block"
+                        style={{
+                            width: `${load - 4}vw`, // Dynamically setting width for medium and larger screens
+                        }}
+                    />
                     </div>
                 </motion.div>
             )}
