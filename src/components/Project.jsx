@@ -1,37 +1,80 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const projects = [
   {
+    title: "Personal Portfolio",
+    description:
+      "A fully responsive personal portfolio crafted with the MERN stack, Tailwind CSS, and Framer Motion.",
+    longDescription:
+      "The Personal Portfolio project is a dynamic and responsive web application that showcases my skills, projects, and achievements. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), Tailwind CSS for modern styling, and Framer Motion for smooth animations, this portfolio is designed to make a strong impression. It highlights my full-stack development skills through an elegant, interactive interface that adapts to any device. The project also integrates version control via GitHub and a live demo link to demonstrate real-time progress and updates. This portfolio effectively reflects my technical expertise and dedication to building user-friendly applications.",
+    techStack: ["MERN", "Tailwindcss", "Framer-Motion"],
+    github: "https://github.com/ParamDhama/new-portfolio",
+    live: "https://paramdhama.netlify.app/",
+  },
+  {
+    title: "Shortify",
+    description:
+      "A modern and secure URL shortener built with React, Node.js, and MongoDB.",
+    longDescription:
+      "Shortify is a robust and efficient URL shortening platform designed to simplify link management and tracking. Built with the MERN stack (MongoDB, Express.js, React, Node.js), it features JWT-based authentication for secure user sessions. The system also includes real-time QR code generation and email notifications for critical updates. The responsive interface ensures a smooth user experience across all devices. Additionally, users can manage their shortened links through an intuitive dashboard. Shortify is optimized for performance, leveraging MongoDB for data persistence and implementing comprehensive error handling for seamless operations.",
+    techStack: ["MERN", "Tailwindcss", "Email Notification"],
+    github: "https://github.com/ParamDhama/shortify-frontend",
+  },
+  {
+    title: "Discord-Bot",
+    description:
+      "A custom Discord bot using Node.js that leverages the Google Gemini API.",
+    longDescription:
+      "This Discord Bot project is an interactive tool designed to enhance user engagement within Discord communities. Developed using Node.js and integrated with the Google Gemini API, the bot can respond to commands, manage server interactions, and deliver automated responses. Its real-time communication features promote vibrant and dynamic server environments. With robust error handling and API integration, the bot processes user inputs efficiently, providing accurate and prompt replies. The modular architecture allows for easy feature expansion, making it adaptable to evolving community needs and maintaining smooth operation across various server configurations.",
+    techStack: ["Nodejs", "Google Gemini", "Javascript"],
+  },
+  {
     title: "Real-Time Chat Application",
-    description: "A real-time chat application built using MERN Stack and Socket.io for instant messaging. Features group chat, online status, and JWT authentication.",
+    description:
+      "A real-time chat application built using the MERN Stack and Socket.io.",
+    longDescription:
+      "The Real-Time Chat Application is a dynamic communication platform that supports group chats and individual messaging. Developed with the MERN stack and Socket.io, it features seamless live messaging with low latency. The application implements JWT-based authentication to ensure secure conversations. Online status indicators and user presence tracking enhance interactivity. Additionally, the chat UI is built with Tailwind CSS for a sleek and responsive design. The backend efficiently handles multiple connections while maintaining data integrity. This application is ideal for fostering real-time communication and collaboration among users.",
     techStack: ["MERN", "Socket.io", "JWT", "Tailwind CSS"],
   },
   {
     title: "Inventory Management System",
-    description: "A system for tracking stock levels, managing orders, and automating alerts. Features a REST API and role-based access control.",
+    description:
+      "A comprehensive system for tracking stock levels, managing orders, and automating alerts.",
+    longDescription:
+      "The Inventory Management System is a robust solution for efficiently managing stock, orders, and inventory alerts. Built with Node.js, Express.js, MongoDB, and Chart.js, it provides real-time data visualization and insightful analytics. The application features role-based access control to maintain data security and streamline operations. Users can track inventory levels, generate reports, and set threshold alerts to mitigate stock issues. Its RESTful API ensures seamless integration with other business systems. This project is designed to optimize inventory management processes for medium to large-scale enterprises, enhancing operational efficiency.",
     techStack: ["Node.js", "MongoDB", "Express.js", "Chart.js"],
   },
   {
     title: "Job Portal",
-    description: "A job portal with role-based authentication, job postings, application tracking, and resume uploads using Multer.",
+    description:
+      "A dynamic job portal with role-based authentication, job postings, and resume uploads.",
+    longDescription:
+      "The Job Portal project is an end-to-end platform connecting job seekers with employers. Built on the MERN stack, it features robust authentication mechanisms using JWT and role-based access control. The system allows employers to post job openings while applicants can submit their resumes via Multer for seamless file uploads. Integrated email notifications keep users updated on their application status. The intuitive interface, powered by Tailwind CSS, offers a smooth user experience across devices. By simplifying the job application process, this portal enhances employment opportunities and recruitment efficiency.",
     techStack: ["MERN", "Multer", "Email Notifications"],
   },
-  {
-    title: "Shortify",
-    description: "A modern and secure URL shortener built with React, Node.js, and MongoDB, featuring JWT authentication, link management, QR code generation, and a sleek, responsive UI.",
-    techStack: ["MERN", "Tailwindcss","Email Notification"],
-    github: "https://github.com/ParamDhama/shortify-frontend"
-  }
 ];
 
 const Project = () => {
+  const [showMore, setShowMore] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Toggle showing more projects
+  const toggleShowMore = () => setShowMore(!showMore);
+
+  // Handle opening the modal
+  const openModal = (project) => setSelectedProject(project);
+
+  // Handle closing the modal
+  const closeModal = () => setSelectedProject(null);
+
+  const displayedProjects = showMore ? projects : projects.slice(0, 3);
+
   return (
     <section id="project" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
       <div className="max-w-6xl mx-auto text-center">
-        
-        {/* Section Heading Animation */}
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,37 +84,26 @@ const Project = () => {
           My Projects
         </motion.h2>
 
-        <motion.p 
-          className="text-lg text-gray-700 mb-12"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          Here are some of my major projects showcasing my skills in <span className="font-bold text-purple-600">Full-Stack Development</span>.
-        </motion.p>
-
-        {/* Projects Grid Animation */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => (
-            <motion.div 
-              key={index} 
+          {displayedProjects.map((project, index) => (
+            <motion.div
+              key={index}
               className="bg-white p-6 shadow-lg rounded-lg flex flex-col cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => openModal(project)}
             >
               <h3 className="text-xl font-semibold text-purple-600">{project.title}</h3>
-              <p className="text-gray-700 mt-2 flex-1">{project.description}</p>
-              
-              {/* Tech Stack Badges */}
-              <div className="mt-3 flex flex-wrap gap-2">
+              <p className="text-gray-700 mt-2">{project.description}</p>
+               {/* Tech Stack Badges */}
+               <div className="mt-3 flex flex-wrap gap-2">
                 {project.techStack.map((tech, idx) => (
                   <motion.span 
                     key={idx} 
@@ -83,8 +115,8 @@ const Project = () => {
                 ))}
               </div>
 
-              {/* Links */}
-              <div className="mt-4 flex justify-between">
+                            {/* Links */}
+                            <div className="mt-4 flex justify-between">
                 {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-purple-600">
                   <FaGithub className="mr-2" /> GitHub
                 </a>}
@@ -95,6 +127,84 @@ const Project = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Show More/Less Button */}
+        <motion.button
+          onClick={toggleShowMore}
+          className="mt-8 px-6 py-2 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {showMore ? "Show Less" : "Show More"}
+        </motion.button>
+
+        {/* Modal for Project Details */}
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 bg-black/75 flex items-center justify-center z-50"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-white hover:text-purple-500 z-[999]"
+              onClick={closeModal}
+            >
+              <FaTimes size={30} />
+            </button>
+
+            <motion.div
+              key={selectedProject.title}
+              className="bg-white rounded-lg p-6 max-w-2xl w-full"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              <h2 className="text-2xl font-semibold text-purple-600">{selectedProject.title}</h2>
+              <p className="text-gray-700 mt-2">{selectedProject.longDescription}</p>
+
+              {/* Tech Stack Badges */}
+              <div className="mt-3 flex flex-wrap gap-2">
+                {selectedProject.techStack.map((tech, idx) => (
+                  <motion.span
+                    key={idx}
+                    className="px-3 py-1 bg-purple-200 text-purple-800 text-sm font-semibold rounded-md"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="mt-4 flex justify-start gap-4">
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-600 hover:text-purple-600"
+                  >
+                    <FaGithub className="mr-2" /> GitHub
+                  </a>
+                )}
+                {selectedProject.live && (
+                  <a
+                    href={selectedProject.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-600 hover:text-purple-600"
+                  >
+                    <FaExternalLinkAlt className="mr-2" /> Live Demo
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
