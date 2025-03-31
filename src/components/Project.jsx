@@ -42,6 +42,14 @@ const projects = [
     github: "https://github.com/ParamDhama/shortify-frontend",
   },
   {
+    title: "StickyNotes",
+    description:
+      "A lightweight sticky notes application built with Electron.js and Node.js for Linux Ubuntu.",
+    longDescription:
+      "StickyNotes is a productivity-enhancing application designed to provide a simple and effective way to manage tasks and reminders on Linux Ubuntu systems. Unlike Windows, Linux does not have a built-in sticky notes app by default. StickyNotes fills this gap by offering a compact and efficient tool that consumes minimal memory and screen space. Data is stored locally, ensuring quick access and offline functionality. With an intuitive interface, users can create, edit, and delete notes effortlessly. The application is optimized to boost productivity without sacrificing system performance.",
+    techStack: ["Electron.js", "Node.js", "Linux"],
+  },
+  {
     title: "Discord-Bot",
     description:
       "A custom Discord bot using Node.js that leverages the Google Gemini API.",
@@ -57,8 +65,6 @@ const projects = [
       "The Real-Time Chat Application is a dynamic communication platform that supports group chats and individual messaging. Developed with the MERN stack and Socket.io, it features seamless live messaging with low latency. The application implements JWT-based authentication to ensure secure conversations. Online status indicators and user presence tracking enhance interactivity. Additionally, the chat UI is built with Tailwind CSS for a sleek and responsive design. The backend efficiently handles multiple connections while maintaining data integrity. This application is ideal for fostering real-time communication and collaboration among users.",
     techStack: ["MERN", "Socket.io", "JWT", "Tailwind CSS"],
   },
-
-
   {
     title: "Inventory Management System",
     description:
