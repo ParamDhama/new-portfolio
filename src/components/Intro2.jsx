@@ -132,15 +132,15 @@ const Intro2 = () => {
                         </AnimatePresence>
 
                     </div>
-                    <div className='absolute bottom-20 right-20 text-white text-2xl'>
-                        {load}%
-                    </div>
-                    <div className='absolute bottom-20 w-screen text-white text-2xl flex justify-center items-center'>
+                    
+                    <div className='absolute bottom-28 md:bottom-20 w-screen text-white text-2xl flex justify-center items-center'>
                         <div className='w-96 text-center'>
                             &quot;{developerQuotes[quoteIndex].quote}&quot; — {developerQuotes[quoteIndex].author}
                         </div>
                     </div>
-
+                    <div className='absolute bottom-15 md:bottom-20 right-5 md:right-20 text-white text-xl md:text-2xl '>
+                        {load}%
+                    </div>
                     <div className='absolute bottom-10 left-2 h-2 bg-yellow-300 rounded-2xl' style={{ width: `${load - 2}vw` }}>
 
                     </div>

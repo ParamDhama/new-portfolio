@@ -40,10 +40,10 @@ const Navbar = () => {
         {/* Logo */}
         <a
         href="#home" 
-        className={`text-3xl font-bold tracking-wide transition-all cursor-default cursor-pointer ${
+        className={`text-xl md:text-3xl font-bold tracking-wide transition-all cursor-default cursor-pointer ${
           isScrolled ? "text-purple-600" : "text-white"
         }`}>
-          Param Dhama
+          PD
         </a>
 
         {/* Desktop Navigation */}

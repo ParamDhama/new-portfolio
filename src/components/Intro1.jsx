@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import person from '/person.png';
+import CanvasParticles from './CanvasParticles';
 
 const Intro1 = ({ onEnd }) => {
     const [showIntro, setShowIntro] = useState(true);
@@ -11,7 +12,6 @@ const Intro1 = ({ onEnd }) => {
         return () => { document.body.style.overflow = ''; };
     }, [showIntro]);
 
-    // Disable interactions while the intro is active.
     const disableEvents = (e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -37,12 +37,12 @@ const Intro1 = ({ onEnd }) => {
             document.removeEventListener('click', disableEvents, true);
         };
     }, [showIntro]);
-    // Extended timer to allow extra content to be seen.
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowIntro(false);
-            onEnd();  // Trigger when Intro1 ends
-        }, 3000);
+            onEnd();
+        }, 5000);
         return () => clearTimeout(timer);
     }, [onEnd]);
 
@@ -54,21 +54,10 @@ const Intro1 = ({ onEnd }) => {
                     initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 0 }}
-                    transition={{ duration: .5 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    {/* Subtle animated background overlay */}
-                    <motion.div
-                        className="absolute inset-0"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.2 }}
-                        transition={{ duration: 2 }}
-                        style={{
-                            background: 'linear-gradient(270deg, #8B5CF6, #4F46E5, #8B5CF6)',
-                            backgroundSize: '400% 400%',
-                        }}
-                    />
+                    <CanvasParticles />
                     <div className="relative z-10 flex flex-col justify-center items-center h-screen">
-                        {/* Profile Image and Name */}
                         <motion.div
                             className="flex flex-col justify-center items-center"
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -81,10 +70,8 @@ const Intro1 = ({ onEnd }) => {
                                 className="w-72 md:w-96 rounded-full"
                                 style={{ boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.6)" }}
                             />
-                            <h1 className="text-center text-yellow-300 text-6xl font-bold mt-8">Param Dhama</h1>
+                            <h1 className="text-center text-yellow-300 text-4xl md:text-6xl font-bold mt-8">Param Dhama</h1>
                         </motion.div>
-
-                        {/* Tagline & Mission Statement */}
                         <motion.div
                             className="mt-6 text-center"
                             initial={{ opacity: 0, y: 20 }}
@@ -98,8 +85,6 @@ const Intro1 = ({ onEnd }) => {
                                 Transforming ideas into groundbreaking digital realities.
                             </p>
                         </motion.div>
-
-                        {/* Quick Profile Snapshot */}
                         <motion.div
                             className="flex space-x-4 mt-6"
                             initial={{ opacity: 0 }}
@@ -110,7 +95,6 @@ const Intro1 = ({ onEnd }) => {
                             <span className="text-white text-lg">Node.js</span>
                             <span className="text-white text-lg">Python</span>
                         </motion.div>
-
                     </div>
                 </motion.div>
             )}
