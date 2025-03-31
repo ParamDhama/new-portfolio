@@ -2,33 +2,29 @@ import { useState } from "react";
 import axios from "axios";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { toast } from 'react-toastify';
 
+// eslint-disable-next-line react/prop-types
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [success, setSuccess] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post("https://admin-portfolio-cj8u.onrender.com/api/contact", form);
-      setSuccess("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-      setTimeout(() => {
-        setSuccess(null);
-      }, 3000);
+      toast("Message sent successfully!");
+
     // eslint-disable-next-line no-unused-vars
     } catch (err) {
-      setSuccess("Failed to send message. Please try again later.");
-      setTimeout(() => {
-        setSuccess(null);
-      }, 3000);
+      toast.error("Failed to send message. Please try again later.");
     }
   };
 
   return (
     <section id="contact" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
       <div className="max-w-6xl mx-auto text-center">
-
+        
         {/* Section Title */}
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"
@@ -47,13 +43,12 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Whether you have an idea to discuss, a project to collaborate on, or just want to say hello, feel free to reach out. We’d love to hear from you and explore potential opportunities together!
+          Whether you have an idea to discuss, a project to collaborate on, or just want to say hello, feel free to reach out!
         </motion.p>
 
         {/* Contact Info & Form */}
         <div className="grid md:grid-cols-2 gap-12">
-          
-          {/* Left - Contact Details */}
+          {/* Contact Details */}
           <motion.div 
             className="space-y-6 text-left"
             initial={{ opacity: 0, x: -50 }}
@@ -96,7 +91,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right - Contact Form */}
+          {/* Contact Form */}
           <motion.form 
             onSubmit={handleSubmit}
             className="bg-white p-8 rounded-lg shadow-lg flex flex-col space-y-4"
@@ -127,20 +122,11 @@ const Contact = () => {
               onChange={(e) => setForm({ ...form, message: e.target.value })} 
               className="p-4 border border-gray-300 rounded-lg min-h-[150px]" 
               required 
-            ></textarea>
-            <button 
-              type="submit" 
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg transition duration-300 hover:bg-purple-700"
-            >
+            />
+            <button type="submit" className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700">
               Send
             </button>
-            {success && (
-              <p className={`text-lg ${success.includes("successfully") ? "text-green-600" : "text-red-600"} mt-2`}>
-                {success}
-              </p>
-            )}
           </motion.form>
-
         </div>
       </div>
     </section>
