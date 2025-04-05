@@ -10,13 +10,6 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Nitin Shrivastav",
-    title: "Machine Learning Engineer at AVIZVA",
-    message: "Your commitment to delivering high-quality solutions on time has made a significant impact on our projects. Great work!",
-    image: "/1710610762265.jpeg",
-    rating: 4,
-  },
-  {
     name: "Abhishek Yadav",
     title: "Freelance Full-Stack Developer",
     message: "Your ability to tackle complex problems and find efficient solutions is impressive. Keep up the fantastic work!",
