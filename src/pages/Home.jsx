@@ -10,7 +10,7 @@ import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden bg-white'>
       <ToastContainer
         position="top-right"
         autoClose={5000}

@@ -10,6 +10,13 @@ const testimonials = [
     rating: 5,
   },
   {
+    name: "Nitin Shrivastav",
+    title: "Machine Learning Engineer at AVIZA",
+    message: "Your Commitment to delivering high-quality solutions on time has made a signigicant impact on our projects. Great Work!",
+    image: "/1710610762265.jpeg",
+    rating: 5
+  },
+  {
     name: "Abhishek Yadav",
     title: "Freelance Full-Stack Developer",
     message: "Your ability to tackle complex problems and find efficient solutions is impressive. Keep up the fantastic work!",
@@ -40,7 +47,7 @@ const StarRating = ({ rating }) => {
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12">
+    <section id="testimonials" className=" bg-gray-100 py-16 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center cursor-default">
         <motion.h2
           className="text-4xl font-bold text-purple-600 mb-8"

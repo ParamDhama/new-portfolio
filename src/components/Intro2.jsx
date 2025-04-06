@@ -66,14 +66,14 @@ const Intro2 = () => {
 
     // Hide the intro panel after 10 seconds.
     useEffect(() => {
-        const timer = setTimeout(() => setShowIntro(false), 6000);
+        const timer = setTimeout(() => setShowIntro(false), 3000);
         return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {
         const logoTimer = setTimeout(() => {
             setIndex((prevIndex) => (prevIndex + 1) % logos.length);
-        }, 2000);
+        }, 1000);
         return () => clearTimeout(logoTimer);
     }, [index]);
 
@@ -81,7 +81,7 @@ const Intro2 = () => {
         const logoTimer = setTimeout(() => {
 
             setLoad((prev) => prev < 100 ? (prev + 1) : 100);
-        }, 6000 / 120);
+        }, 3000 / 120);
         return () => clearTimeout(logoTimer);
     }, [load]);
 

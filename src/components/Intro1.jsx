@@ -43,7 +43,7 @@ const Intro1 = ({ onEnd }) => {
         const timer = setTimeout(() => {
             setShowIntro(false);
             onEnd();
-        }, 5000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, [onEnd]);
 
@@ -55,7 +55,7 @@ const Intro1 = ({ onEnd }) => {
                     initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.7 }}
                 >
                     <CanvasParticles />
                     <div className="relative z-10 flex flex-col justify-center items-center h-screen">
