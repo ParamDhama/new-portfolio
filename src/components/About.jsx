@@ -51,7 +51,7 @@ const About = () => {
           }, {
             icon: <FaServer size={40} className="text-purple-600 mb-2" />,
             title: "Backend",
-            description: "Node.js, Express.js, ASP.NET Web API, JWT"
+            description: "Node.js, Express.js, JWT, Redis, Microservice"
           }, {
             icon: <FaDatabase size={40} className="text-purple-600 mb-2" />,
             title: "Database",
