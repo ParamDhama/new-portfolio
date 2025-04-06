@@ -68,6 +68,8 @@ const Intro1 = ({ onEnd }) => {
                             <img
                                 src={person}
                                 alt="Profile"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-72 md:w-96 rounded-full"
                                 style={{ boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.6)" }}
                             />

@@ -83,6 +83,8 @@ const Testimonials = () => {
                     className="w-16 h-16 rounded-full mr-4"
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
+                    loading="lazy"
+                    decoding="async"
                     transition={{ duration: 0.4 }}
                   />
                 ) : (

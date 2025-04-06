@@ -97,6 +97,8 @@ const AchievementSection = () => {
                             <img
                                 src={cert.imageUrl}
                                 alt={cert.title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-48 object-cover rounded-md mb-4"
                             />
                             <h3 className="text-xl font-semibold text-purple-600">{cert.title}</h3>
@@ -162,6 +164,8 @@ const AchievementSection = () => {
                                 className="w-full max-h-[80vh] object-contain rounded-4xl"
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
+                                loading="lazy"
+                                decoding="async"
                                 exit={{ scale: 0.8, opacity: 0 }}
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                             />

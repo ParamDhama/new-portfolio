@@ -51,6 +51,8 @@ const HeroSection = () => {
             src={person} 
             alt="Profile" 
             className="w-72 md:w-96 rounded-full shadow-lg"
+            loading="lazy"
+            decoding="async"
             animate={{ y: [0, -10, 0] }} // Floating effect
             transition={{  duration: 1, ease: "easeInOut" }}
             whileHover={{
