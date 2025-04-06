@@ -56,7 +56,7 @@ const AchievementSection = () => {
     const displayedCertificates = showMore ? achievementCertificates : achievementCertificates.slice(0, 3);
 
     return (
-        <section id="achievement" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
+        <section id="achievement" className="bg-gray-100 py-16 px-6 md:px-12 pt-20">
             <div className="max-w-6xl mx-auto text-center">
                 <motion.h2
                     className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"

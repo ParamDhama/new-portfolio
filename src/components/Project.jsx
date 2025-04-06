@@ -104,7 +104,7 @@ const Project = () => {
   const displayedProjects = showMore ? projects : projects.slice(0, 3);
 
   return (
-    <section id="project" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
+    <section id="project" className="  bg-gray-100 py-16 px-6 md:px-12 pt-20">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"
