@@ -38,7 +38,7 @@ const About = () => {
 
         {/* Right - Skills Animation */}
         <motion.div 
-          className="lg:w-1/2 mt-8 lg:mt-0 flex flex-wrap justify-center gap-6"
+          className="lg:w-2/3 mt-8 lg:mt-0 grid grid-cols-1 md:flex md:flex-wrap justify-center gap-6"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -51,7 +51,7 @@ const About = () => {
           }, {
             icon: <FaServer size={40} className="text-purple-600 mb-2" />,
             title: "Backend",
-            description: "Node.js, Express.js, JWT, Redis, Microservice"
+            description: "Node.js, Express.js, JWT, Redis"
           }, {
             icon: <FaDatabase size={40} className="text-purple-600 mb-2" />,
             title: "Database",
