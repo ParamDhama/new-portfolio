@@ -7,10 +7,11 @@ import Contact from '../components/Contact'
 import HeroSection from '../components/HeroSection'
 import AchievementSection from '../components/AchievementSection'
 import Testimonials from '../components/Testimonials'
+import SkillsStrip from '../components/SkillsStrip';
 
 const Home = () => {
   return (
-    <div className='overflow-x-hidden bg-white'>
+    <div className='overflow-x-hidden '>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -25,6 +26,7 @@ const Home = () => {
       />
       <Navbar />
       <HeroSection />
+      <SkillsStrip />
       <About />
       <Project />
       <AchievementSection />
