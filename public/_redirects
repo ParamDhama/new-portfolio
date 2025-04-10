@@ -1,2 +1,1 @@
-# Redirect all routes to the index.html for React Router support
-/*    /index.html   200
+https://paramdhama.in/*  https://www.paramdhama.in/:splat  301!
