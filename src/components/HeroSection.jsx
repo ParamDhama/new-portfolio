@@ -39,7 +39,7 @@ const HeroSection = () => {
                 Contact Me
               </motion.button>
             </a>
-            <a href="/Param Dhama Resume.pdf" download="Param Dhama Resume.pdf">
+            <a href="/Param Dhama Resume.pdf" download="Param Dhama Resume.pdf" className="hidden">
 
               <motion.button
                 className="px-6 py-3 bg-purple-900 text-yellow-400 font-semibold rounded-lg shadow-md hover:bg-purple-700 transition-all"
