@@ -73,7 +73,7 @@ const Intro1 = ({ onEnd }) => {
                                 className="w-72 md:w-96 rounded-full"
                                 style={{ boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.6)" }}
                             />
-                            <h1 className="text-center text-yellow-300 text-4xl md:text-6xl font-bold mt-8">Param Dhama</h1>
+                            <h2 className="text-center text-yellow-300 text-4xl md:text-6xl font-bold mt-8">Param Dhama</h2>
                         </motion.div>
                         <motion.div
                             className="mt-6 text-center"

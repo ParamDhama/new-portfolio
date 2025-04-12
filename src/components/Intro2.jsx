@@ -117,7 +117,7 @@ const Intro2 = () => {
                                     <ActiveLogo />
                                 </div>
 
-                                <motion.h1
+                                <motion.h2
                                     key={`title-${index}`}
                                     className="text-center mt-10 text-2xl"
                                     initial={{ opacity: 0, scale: 0.1 }}
@@ -126,7 +126,7 @@ const Intro2 = () => {
                                     transition={{ duration: 0.3 }}
                                 >
                                     {ActiveTitle}
-                                </motion.h1>
+                                </motion.h2>
                             </motion.div>
                         </AnimatePresence>
 

@@ -88,14 +88,14 @@ const Testimonials = () => {
                     transition={{ duration: 0.4 }}
                   />
                 ) : (
-                  <motion.h1
+                  <motion.h2
                     className="w-16 h-16 rounded-full mr-4 bg-purple-800 text-white text-2xl flex justify-center items-center"
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.4 }}
                   >
                     {testimonial.name[0]}
-                  </motion.h1>
+                  </motion.h2>
                 )}
                 <div className="text-left">
                   <h3 className="text-xl font-semibold">{testimonial.name}</h3>
