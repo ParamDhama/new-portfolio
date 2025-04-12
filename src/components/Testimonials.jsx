@@ -6,14 +6,14 @@ const testimonials = [
     name: "Prashant Prajapati",
     title: "Senior Developer at Infosys",
     message: "Working with you was an absolute pleasure! Your dedication and skills in software development are truly remarkable.",
-    image: "/1722100183888.jpeg",
+    image: "/1722100183888.jpg",
     rating: 5,
   },
   {
     name: "Nitin Shrivastav",
     title: "Machine Learning Engineer at AVIZA",
     message: "Your Commitment to delivering high-quality solutions on time has made a signigicant impact on our projects. Great Work!",
-    image: "/1710610762265.jpeg",
+    image: "/1710610762265.jpg",
     rating: 5
   },
   {
