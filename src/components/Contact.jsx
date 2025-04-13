@@ -63,12 +63,6 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <FaPhone className="text-purple-600 text-2xl -scale-x-100" />
-              <a href="tel:+917011403127" className="text-lg text-gray-700 hover:text-purple-600">
-                +91 7011403127
-              </a>
-            </div>
 
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-purple-600 text-2xl" />
