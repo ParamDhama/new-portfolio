@@ -1,10 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter, FaSkype } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { toast } from 'react-toastify';
 
- 
+
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
@@ -15,7 +15,7 @@ const Contact = () => {
       setForm({ name: "", email: "", message: "" });
       toast("Message sent successfully!");
 
-    // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars
     } catch (err) {
       toast.error("Failed to send message. Please try again later.");
     }
@@ -24,9 +24,9 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 pt-20">
       <div className="max-w-6xl mx-auto text-center">
-        
+
         {/* Section Title */}
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl font-bold text-purple-600 mb-8"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const Contact = () => {
           Get in Touch
         </motion.h2>
 
-        <motion.p 
+        <motion.p
           className="text-lg text-gray-700 mb-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const Contact = () => {
         {/* Contact Info & Form */}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Details */}
-          <motion.div 
+          <motion.div
             className="space-y-6 text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,10 +63,22 @@ const Contact = () => {
               </a>
             </div>
 
+            <div className="flex items-center space-x-4">
+              <FaSkype className="text-purple-600 text-2xl" />
+              <a
+                href="https://join.skype.com/invite/uotK0fZWExfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-gray-700 hover:text-purple-600 break-all"
+              >
+                https://join.skype.com/invite/uotK0fZWExfr
+              </a>
+            </div>
+
 
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-purple-600 text-2xl" />
-              <p className="text-lg text-gray-700">Baghpat, Uttar Pradesh, India, 250101</p>
+              <p className="text-lg text-gray-700 ">Baghpat, Uttar Pradesh, India, 250101</p>
             </div>
 
             {/* Social Media Links */}
@@ -86,7 +98,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.form 
+          <motion.form
             onSubmit={handleSubmit}
             className="bg-white p-4 py-8 md:p-8 rounded-lg shadow-lg flex flex-col space-y-4"
             initial={{ opacity: 0, x: 50 }}
@@ -94,28 +106,28 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <input 
-              type="text" 
-              placeholder="Your Name" 
-              value={form.name} 
-              onChange={(e) => setForm({ ...form, name: e.target.value })} 
-              className="p-4 border border-gray-300 rounded-lg" 
-              required 
+            <input
+              type="text"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              className="p-4 border border-gray-300 rounded-lg"
+              required
             />
-            <input 
-              type="email" 
-              placeholder="Your Email" 
-              value={form.email} 
-              onChange={(e) => setForm({ ...form, email: e.target.value })} 
-              className="p-4 border border-gray-300 rounded-lg" 
-              required 
+            <input
+              type="email"
+              placeholder="Your Email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              className="p-4 border border-gray-300 rounded-lg"
+              required
             />
-            <textarea 
-              placeholder="Your Message" 
-              value={form.message} 
-              onChange={(e) => setForm({ ...form, message: e.target.value })} 
-              className="p-4 border border-gray-300 rounded-lg min-h-[150px]" 
-              required 
+            <textarea
+              placeholder="Your Message"
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              className="p-4 border border-gray-300 rounded-lg min-h-[150px]"
+              required
             />
             <button type="submit" className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700">
               Send
