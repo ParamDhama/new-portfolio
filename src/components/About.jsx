@@ -14,25 +14,19 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-purple-600 mb-4">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-purple-600 mb-4">About Me – Full Stack Developer</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            I am a <span className="font-semibold">Passionate Software Developer</span> with expertise in 
-            <span className="font-semibold"> JavaScript, Python, and the MERN stack.</span>  
-            Experienced in building scalable web applications, automation tools, and AI-powered solutions.
+            I am <span className="font-semibold">Param Dhama</span> a <span className="font-semibold">Full Stack Software Developer</span> with extensive experience in 
+            <span className="font-semibold"> JavaScript, Python, and the MERN stack</span>, specializing in the development of scalable web applications, automation tools, and AI-driven solutions.
           </p>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            My journey into software development began with a deep curiosity about how applications work behind the scenes. 
-            Over the years, I have honed my skills in <span className="font-semibold">frontend and backend development</span>, 
-            constantly pushing myself to build more robust and efficient solutions.
+            My journey as a <span className="font-semibold">web developer</span> started with a deep interest in how applications work behind the scenes. Over the years, I’ve mastered both <span className="font-semibold">frontend and backend development</span> to deliver high-quality, efficient solutions.
           </p>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            I take pride in my <span className="font-semibold">problem-solving abilities</span> and my dedication to writing clean, maintainable code. 
-            Whether it’s developing RESTful APIs or crafting modern, responsive user interfaces, I strive to deliver 
-            <span className="font-semibold"> high-quality software that enhances user experiences.</span>
+            I take pride in my <span className="font-semibold">problem-solving skills</span> and my ability to write clean, maintainable code. Whether I&apos;m developing <span className="font-semibold">RESTful APIs</span> or building modern, responsive user interfaces, I focus on delivering <span className="font-semibold">exceptional user experiences</span>.
           </p>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            My goal is to become a proficient <span className="font-semibold">Software Engineer</span> and contribute to impactful projects that make a difference. 
-            I am always eager to learn new technologies and continuously improve my skills to stay ahead in the industry.
+            My goal is to grow as a proficient <span className="font-semibold">Software Engineer</span> and contribute to innovative projects that make a significant impact. I am passionate about staying ahead of the curve by learning new technologies and continuously improving my development skills.
           </p>
         </motion.div>
 
@@ -46,19 +40,19 @@ const About = () => {
         >
           {[{
             icon: <FaCode size={40} className="text-purple-600 mb-2" />,
-            title: "Frontend",
+            title: "Frontend Development",
             description: "React.js, Next.js, Tailwind CSS, JavaScript"
           }, {
             icon: <FaServer size={40} className="text-purple-600 mb-2" />,
-            title: "Backend",
+            title: "Backend Development",
             description: "Node.js, Express.js, JWT, Redis"
           }, {
             icon: <FaDatabase size={40} className="text-purple-600 mb-2" />,
-            title: "Database",
+            title: "Database Management",
             description: "MongoDB, SQL, PostgreSQL"
           }, {
             icon: <FaTools size={40} className="text-purple-600 mb-2" />,
-            title: "Tools & Others",
+            title: "Development Tools & Technologies",
             description: "Git, GitHub, Docker, REST APIs, WebSockets"
           }].map((skill, index) => (
             <motion.div 

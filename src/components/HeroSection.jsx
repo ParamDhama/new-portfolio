@@ -53,7 +53,7 @@ const HeroSection = () => {
         >
           <motion.img
             src={person}
-            alt="Profile"
+            alt="Param Dhama - Full Stack Developer Profile Picture"
             className="w-72 md:w-96 rounded-full shadow-lg"
             loading="lazy"
             decoding="async"
