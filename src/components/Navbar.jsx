@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navLinks = ["Home", "About", "Project", "Achievement", "Testimonials", "Contact"];
+  const navLinks = ["Home", "About", "Project", "Testimonials", "Contact"];
   const socialLinks = [
     { href: "https://github.com/ParamDhama", icon: <FaGithub size={24} />, label: "GitHub" },
     { href: "https://www.linkedin.com/in/paramdhama/", icon: <FaLinkedin size={24} />, label: "LinkedIn" },

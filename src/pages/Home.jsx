@@ -29,7 +29,9 @@ const Home = () => {
       <SkillsStrip />
       <About />
       <Project />
+      <div className='hidden'>
       <AchievementSection />
+      </div>
       <Testimonials />
       <Contact />
     </div>
