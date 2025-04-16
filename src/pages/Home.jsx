@@ -5,7 +5,6 @@ import About from '../components/About'
 import Project from '../components/Project'
 import Contact from '../components/Contact'
 import HeroSection from '../components/HeroSection'
-import AchievementSection from '../components/AchievementSection'
 import Testimonials from '../components/Testimonials'
 import SkillsStrip from '../components/SkillsStrip';
 
@@ -29,9 +28,6 @@ const Home = () => {
       <SkillsStrip />
       <About />
       <Project />
-      <div className='hidden'>
-      <AchievementSection />
-      </div>
       <Testimonials />
       <Contact />
     </div>
