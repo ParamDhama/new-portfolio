@@ -28,7 +28,7 @@ const HeroSection = () => {
             <a href="https://www.linkedin.com/in/paramdhama/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaLinkedin /></a>
             <a href="https://x.com/dhama_param" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-yellow-400"><FaTwitter /></a>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex max-sm:justify-center gap-4 mt-6">
 
             <a href="#contact" >
               <motion.button
@@ -37,16 +37,6 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Me
-              </motion.button>
-            </a>
-            <a href="/Param Dhama Resume.pdf" download="Param Dhama Resume.pdf" className="hidden">
-
-              <motion.button
-                className="px-6 py-3 bg-purple-900 text-yellow-400 font-semibold rounded-lg shadow-md hover:bg-purple-700 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Download Resume
               </motion.button>
             </a>
           </div>
